@@ -9,15 +9,11 @@ It allows you to quickly spin up both services in containers, with the FE proxyi
 ## Project Structure
 
 
-utilities/ ← This repo with docker-compose.yml and instructions
-├─ docker-compose.yml
-├─ README.md
-├─ .dockerignore
-FE/ ← Cloned Frontend repo
-BE/ ← Cloned Backend repo
+1. This repo with docker-compose.yml and instructions
+2. Frontend FE repo
+3. Backend BE repo
 
-
-**Note:** The FE and BE repositories should be cloned **next to this repo**, not inside it.
+**Note:** The FE and BE repositories should be cloned **next to this repo inside a shared directory**, not inside it.
 
 ---
 
