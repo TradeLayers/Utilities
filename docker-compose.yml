@@ -13,7 +13,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   backend:
-    build: ./BE
+    build: ../BE
     ports:
       - "5000:5000"
     environment:
@@ -28,7 +28,7 @@ services:
       - db
 
   frontend:
-    build: ./FE
+    build: ../FE
     ports:
       - "3000:80"
     depends_on:
