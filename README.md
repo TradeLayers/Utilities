@@ -1,1 +1,63 @@
 # Utilities
+
+This repository contains helper tools for the project, primarily a **Docker Compose setup** for running the Frontend (FE) and Backend (BE) locally.
+
+It allows you to quickly spin up both services in containers, with the FE proxying API requests to the BE.
+
+---
+
+## Project Structure
+
+
+utilities/ ← This repo with docker-compose.yml and instructions
+├─ docker-compose.yml
+├─ README.md
+├─ .dockerignore
+FE/ ← Cloned Frontend repo
+BE/ ← Cloned Backend repo
+
+
+**Note:** The FE and BE repositories should be cloned **next to this repo**, not inside it.
+
+---
+
+## Prerequisites
+
+- [Docker](https://www.docker.com/) installed
+- [Docker Compose](https://docs.docker.com/compose/) installed
+- Ports **80** and **5000** free on your machine
+
+---
+
+## Setup Instructions
+
+1. Clone this repo:
+
+```bash
+git clone <utilities_repo_url>
+cd utilities
+
+Clone the Frontend and Backend repos next to this folder:
+
+git clone <FE_repo_url> ../FE
+git clone <BE_repo_url> ../BE
+
+Run Docker Compose:
+
+docker-compose up --build
+
+Open your browser:
+
+Frontend (FE): http://localhost/
+
+Backend (BE): http://localhost:5000/
+
+Notes
+
+The FE uses nginx and proxies /api/ requests to the backend container.
+
+Use docker-compose down to stop the containers.
+
+Rebuild containers after code changes with:
+
+docker-compose up --build
