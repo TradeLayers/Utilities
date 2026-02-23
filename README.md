@@ -35,24 +35,24 @@ BE/ ← Cloned Backend repo
 
 ```bash
 git clone <utilities_repo_url>
-cd utilities
-
-Clone the Frontend and Backend repos next to this folder:
-
+cd Utilities
+```
+2. Clone the Frontend and Backend repos next to this folder:
+```bash
 git clone <FE_repo_url> ../FE
 git clone <BE_repo_url> ../BE
-
-Run Docker Compose:
-
+```
+3. Run Docker Compose:
+```bash
 docker-compose up --build
-
-Open your browser:
+```
+4. Open your browser:
 
 Frontend (FE): http://localhost/
 
 Backend (BE): http://localhost:5000/
 
-Notes
+## Notes
 
 The FE uses nginx and proxies /api/ requests to the backend container.
 
