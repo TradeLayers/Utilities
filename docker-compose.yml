@@ -14,6 +14,8 @@ services:
     build: ../BE
     ports:
       - "5000:5000"
+    volumes:
+      - ../BE/logs:/app/logs
     environment:
       FRONTEND_URL: http://localhost:3000
       DB_HOST: db
