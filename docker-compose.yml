@@ -16,6 +16,7 @@ services:
       - "5000:5000"
     environment:
       DB_HOST: db
+      FRONTEND_URL: http://localhost:3000
       DB_PORT: 5432
       DB_USER: postgres
       DB_PASSWORD: postgres
