@@ -21,7 +21,7 @@ It allows you to quickly spin up both services in containers, with the FE proxyi
 
 - [Docker](https://www.docker.com/) installed
 - [Docker Compose](https://docs.docker.com/compose/) installed
-- Ports **80** and **5000** free on your machine
+- Ports **3001**, **5000**, and **5433** free on your machine
 
 ---
 
@@ -44,7 +44,7 @@ docker-compose up --build
 ```
 4. Open your browser:
 
-Frontend (FE): http://localhost/
+Frontend (FE): http://localhost:3001/
 
 Backend (BE): http://localhost:5000/
 
