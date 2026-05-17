@@ -40,7 +40,7 @@ git clone <BE_repo_url> ../BE
 ```
 3. Run Docker Compose:
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 4. Open your browser:
 
@@ -48,12 +48,20 @@ Frontend (FE): http://localhost:3001/
 
 Backend (BE): http://localhost:5000/
 
+Note: The backend requires a Finnhub API key. Create a `.env` file in this `Utilities` folder with the following content before running `docker compose up`:
+
+```
+FINNHUB_API_KEY=your_finnhub_api_key_here
+```
+
 ## Notes
 
 The FE uses nginx and proxies /api/ requests to the backend container.
 
-Use docker-compose down to stop the containers.
+Use `docker compose down` to stop the containers.
 
 Rebuild containers after code changes with:
 
-docker-compose up --build
+```bash
+docker compose up --build
+```
